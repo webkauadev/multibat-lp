@@ -1,16 +1,72 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useEffect } from "react";
+import { Hero } from "@/components/multibat/Hero";
+import { Problem } from "@/components/multibat/Problem";
+import { Solution } from "@/components/multibat/Solution";
+import { Brands } from "@/components/multibat/Brands";
+import { Differentials } from "@/components/multibat/Differentials";
+import { SocialProof } from "@/components/multibat/SocialProof";
+import { HowItWorks } from "@/components/multibat/HowItWorks";
+import { FAQ } from "@/components/multibat/FAQ";
+import { FinalCTA } from "@/components/multibat/FinalCTA";
+import { Footer } from "@/components/multibat/Footer";
+import { StickyWhatsApp } from "@/components/multibat/StickyWhatsApp";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
+  useEffect(() => {
+    document.title = "Multibat | Bateria com Entrega e Instalação em até 50 Minutos";
+
+    const setMeta = (name: string, content: string) => {
+      let el = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement | null;
+      if (!el) {
+        el = document.createElement("meta");
+        el.name = name;
+        document.head.appendChild(el);
+      }
+      el.content = content;
+    };
+    setMeta(
+      "description",
+      "Baterias Moura, Heliar e Pioneiro com entrega e instalação grátis em Vilhena/RO. Atendimento 24h via WhatsApp. Melhor preço garantido."
+    );
+
+    // JSON-LD
+    const ld = document.createElement("script");
+    ld.type = "application/ld+json";
+    ld.text = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "AutoPartsStore",
+      name: "Multibat Baterias",
+      description: "Venda e instalação de baterias automotivas com entrega rápida em Vilhena/RO.",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Avenida Marechal Rondon, 5054",
+        addressLocality: "Vilhena",
+        addressRegion: "RO",
+        addressCountry: "BR",
+      },
+      openingHours: "Mo-Su 00:00-23:59",
+    });
+    document.head.appendChild(ld);
+    return () => {
+      document.head.removeChild(ld);
+    };
+  }, []);
+
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
-    </div>
+    <main className="overflow-x-hidden">
+      <Hero />
+      <Problem />
+      <Solution />
+      <Brands />
+      <Differentials />
+      <SocialProof />
+      <HowItWorks />
+      <FAQ />
+      <FinalCTA />
+      <Footer />
+      <StickyWhatsApp />
+    </main>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
