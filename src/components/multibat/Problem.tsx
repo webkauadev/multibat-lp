@@ -12,8 +12,8 @@ export const Problem = () => (
       <h2 className="text-center font-display text-3xl font-black uppercase text-primary sm:text-4xl md:text-5xl">
         Não deixe um imprevisto <span className="text-secondary">estragar o seu dia.</span>
       </h2>
-      <p className="mx-auto mt-6 max-w-2xl text-center text-lg text-muted-foreground">
-        Ligou o carro e... o motor não vira. A frustração é enorme, mas a solução não precisa ser demorada.
+      <p className="mx-auto mt-6 max-w-2xl text-center text-lg text-muted-foreground whitespace-pre-line">
+        Ligou o carro e... o motor não vira.{"\n"}A frustração é enorme, mas a solução não precisa ser demorada.
       </p>
 
       <ul className="mx-auto mt-10 grid max-w-3xl gap-4">
