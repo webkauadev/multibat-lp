@@ -103,32 +103,41 @@ export const Hero = () => {
 
         {/* ===== RIGHT: Image with gradient ===== */}
         <div className="relative flex w-full items-center justify-center md:w-[40%] md:justify-end lg:w-[45%]">
-          {/* Gradient overlay on the left edge of the image area */}
-          <div
-            className="pointer-events-none absolute inset-0 z-10 hidden md:block"
-            style={{
-              background:
-                "linear-gradient(90deg, rgba(26,42,74,1) 0%, rgba(26,42,74,0.4) 20%, rgba(26,42,74,0) 40%)",
-            }}
-          />
-          {/* Mobile: top gradient for smooth transition */}
-          <div
-            className="pointer-events-none absolute inset-0 z-10 md:hidden"
-            style={{
-              background:
-                "linear-gradient(180deg, rgba(26,42,74,1) 0%, rgba(26,42,74,0.4) 15%, rgba(26,42,74,0) 30%)",
-            }}
-          />
-
-          <img
-            src={mascoteHero}
-            alt="Mascote Multibat e dono - Profissionalismo e confiança"
-            className="relative z-0 h-auto w-full max-w-[320px] animate-fade-up object-contain sm:max-w-[360px] md:max-w-[300px] lg:max-w-[400px]"
-            style={{
-              animationDelay: "0.2s",
-              maxHeight: "600px",
-            }}
-          />
+          {/* Image wrapper for overlay gradient */}
+          <div className="relative animate-fade-up" style={{ animationDelay: "0.2s" }}>
+            <img
+              src={mascoteHero}
+              alt="Mascote Multibat e dono - Profissionalismo e confiança"
+              className="relative h-auto w-full max-w-[320px] object-contain sm:max-w-[360px] md:max-w-[300px] lg:max-w-[400px]"
+              style={{
+                maxHeight: "600px",
+                borderRadius: "16px",
+                boxShadow: "0 20px 60px rgba(0, 0, 0, 0.3)",
+                WebkitMaskImage:
+                  "radial-gradient(ellipse 100% 100% at 70% 50%, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,0) 100%)",
+                maskImage:
+                  "radial-gradient(ellipse 100% 100% at 70% 50%, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,0) 100%)",
+              }}
+            />
+            {/* Gradient overlay on left edge */}
+            <div
+              className="pointer-events-none absolute inset-0 hidden md:block"
+              style={{
+                background:
+                  "linear-gradient(90deg, rgba(26,42,74,1) 0%, rgba(26,42,74,0.6) 20%, rgba(26,42,74,0) 40%)",
+                borderRadius: "16px",
+              }}
+            />
+            {/* Mobile: top gradient */}
+            <div
+              className="pointer-events-none absolute inset-0 md:hidden"
+              style={{
+                background:
+                  "linear-gradient(180deg, rgba(26,42,74,1) 0%, rgba(26,42,74,0.4) 15%, rgba(26,42,74,0) 30%)",
+                borderRadius: "8px",
+              }}
+            />
+          </div>
         </div>
       </div>
     </section>
