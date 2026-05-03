@@ -102,13 +102,13 @@ export const Hero = () => {
         </div>
 
         {/* ===== RIGHT: Image with gradient ===== */}
-        <div className="relative flex w-full items-center justify-center md:w-[40%] md:justify-end lg:w-[45%]">
+        <div className="relative flex w-full items-center justify-center md:w-1/2 md:justify-end">
           {/* Image wrapper for overlay gradient */}
-          <div className="relative animate-fade-up" style={{ animationDelay: "0.2s" }}>
+          <div className="relative w-full animate-fade-up" style={{ animationDelay: "0.2s" }}>
             <img
               src={mascoteHero}
               alt="Mascote Multibat e dono - Profissionalismo e confiança"
-              className="relative h-auto w-full max-w-[320px] object-contain sm:max-w-[360px] md:max-w-[300px] lg:max-w-[400px]"
+              className="relative h-auto w-full object-contain"
               style={{
                 maxHeight: "600px",
                 borderRadius: "16px",
