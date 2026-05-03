@@ -12,7 +12,7 @@ export const Hero = () => {
       {/* Desktop/Tablet: flex row | Mobile: flex col */}
       <div className="mx-auto flex min-h-[auto] max-w-7xl flex-col md:min-h-[700px] md:flex-row md:items-center lg:min-h-[600px]">
         {/* ===== LEFT: Copy ===== */}
-        <div className="relative z-10 w-full px-6 pb-8 pt-4 md:w-[60%] md:py-12 md:pl-8 md:pr-0 lg:w-[55%] lg:pl-12">
+        <div className="relative z-10 w-full px-6 pb-8 pt-4 md:w-1/2 md:py-12 md:pl-8 md:pr-0 lg:pl-12">
           {/* Top bar */}
           <header className="mb-8 flex items-center justify-between md:mb-10">
             <img
