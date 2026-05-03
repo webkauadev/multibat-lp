@@ -4,7 +4,7 @@ import { Problem } from "@/components/multibat/Problem";
 import { Solution } from "@/components/multibat/Solution";
 import { Brands } from "@/components/multibat/Brands";
 import { Differentials } from "@/components/multibat/Differentials";
-import { SocialProof } from "@/components/multibat/SocialProof";
+import { ReviewCarousel } from "@/components/multibat/ReviewCarousel";
 import { HowItWorks } from "@/components/multibat/HowItWorks";
 import { FAQ } from "@/components/multibat/FAQ";
 import { FinalCTA } from "@/components/multibat/FinalCTA";
@@ -59,7 +59,7 @@ const Index = () => {
       <Solution />
       <Brands />
       <Differentials />
-      <SocialProof />
+      <ReviewCarousel />
       <HowItWorks />
       <FAQ />
       <FinalCTA />
