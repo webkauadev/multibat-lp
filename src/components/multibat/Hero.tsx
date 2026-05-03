@@ -2,10 +2,11 @@ import { CTAButton } from "./CTAButton";
 import { Zap, ShieldCheck, Clock, Check } from "lucide-react";
 import heroImg from "@/assets/hero-battery.jpg";
 import logo from "@/assets/multibat-logo.jpeg";
+import mascote from "@/assets/mascote.png";
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-[100svh] overflow-hidden">
+    <section className="relative min-h-[600px] lg:min-h-[600px] md:min-h-[700px] overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0">
         <img
@@ -27,15 +28,16 @@ export const Hero = () => {
         </div>
       </header>
 
-      {/* Content */}
-      <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-start px-4 pb-20 pt-8 sm:px-6 sm:pt-12 lg:px-8 lg:pt-20">
-        <div className="max-w-3xl animate-fade-up">
+      {/* Content - 2 columns on desktop */}
+      <div className="relative z-10 mx-auto flex max-w-7xl flex-col lg:flex-row lg:items-center px-4 pb-20 pt-8 sm:px-6 sm:pt-12 lg:px-8 lg:pt-16 gap-8 lg:gap-10">
+        {/* Column 1 - Text */}
+        <div className="flex-1 animate-fade-up">
           <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-secondary px-4 py-2 text-xs sm:text-sm font-bold uppercase tracking-wider text-white shadow-cta">
             <Zap className="h-4 w-4" fill="currentColor" />
             Bateria acabou? Não fique parado!
           </div>
 
-          <h1 className="font-display text-4xl font-black uppercase leading-[0.95] text-white sm:text-5xl md:text-6xl lg:text-7xl">
+          <h1 className="font-display text-4xl font-black uppercase leading-[0.95] text-white sm:text-5xl md:text-6xl lg:text-6xl">
             Bateria nova com{" "}
             <span className="text-secondary-glow">entrega e instalação grátis</span>{" "}
             em até <span className="underline decoration-secondary decoration-[6px] underline-offset-4">50 minutos.</span>
@@ -68,6 +70,15 @@ export const Hero = () => {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Column 2 - Mascote */}
+        <div className="flex flex-1 items-center justify-center lg:justify-end animate-mascote-bounce">
+          <img
+            src={mascote}
+            alt="Mascote Multibat - Energia de Verdade"
+            className="h-[280px] md:h-[350px] lg:h-[450px] w-auto object-contain drop-shadow-[0_4px_12px_rgba(0,0,0,0.3)] transition-transform duration-300 lg:hover:rotate-2 lg:hover:-translate-y-2"
+          />
         </div>
       </div>
     </section>
