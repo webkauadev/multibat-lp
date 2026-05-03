@@ -1,11 +1,15 @@
 import { CTAButton } from "./CTAButton";
 import { ShieldCheck } from "lucide-react";
+import brandMoura from "@/assets/brand-moura.png";
+import brandHeliar from "@/assets/brand-heliar.jpg";
+import brandPioneiro from "@/assets/brand-pioneiro.png";
+import brandMaxfor from "@/assets/brand-maxfor.png";
 
 const brands = [
-  { name: "Moura", desc: "Referência em durabilidade e desempenho premium" },
-  { name: "Heliar", desc: "Alta confiabilidade e tecnologia reconhecida" },
-  { name: "Pioneiro", desc: "Equilíbrio entre performance e custo" },
-  { name: "Maxfor", desc: "Excelente custo-benefício para solução inteligente" },
+  { name: "Moura", desc: "Referência em durabilidade e desempenho premium", logo: brandMoura },
+  { name: "Heliar", desc: "Alta confiabilidade e tecnologia reconhecida", logo: brandHeliar },
+  { name: "Pioneiro", desc: "Equilíbrio entre performance e custo", logo: brandPioneiro },
+  { name: "Maxfor", desc: "Excelente custo-benefício para solução inteligente", logo: brandMaxfor },
 ];
 
 export const Brands = () => (
@@ -30,8 +34,8 @@ export const Brands = () => (
             <div className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-accent/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-accent">
               <ShieldCheck className="h-3 w-3" /> Original
             </div>
-            <div className="flex h-24 w-full items-center justify-center rounded-xl bg-gradient-to-br from-primary to-primary-dark p-4">
-              <span className="font-display text-3xl font-black uppercase tracking-wider text-white">{b.name}</span>
+            <div className="flex h-24 w-full items-center justify-center rounded-xl bg-white p-4">
+              <img src={b.logo} alt={`Logo ${b.name}`} className="h-full max-w-full object-contain" />
             </div>
             <h3 className="mt-5 font-display text-xl font-bold uppercase text-primary">{b.name}</h3>
             <p className="mt-2 text-sm text-muted-foreground">{b.desc}</p>
