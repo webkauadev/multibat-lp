@@ -1,6 +1,6 @@
 import { CTAButton } from "./CTAButton";
 import { Zap, ShieldCheck, Clock, Check } from "lucide-react";
-import logo from "@/assets/multibat-logo.jpeg";
+
 import mascoteHero from "@/assets/mascote-hero.png";
 
 export const Hero = () => {
