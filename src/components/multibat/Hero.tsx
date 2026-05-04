@@ -33,18 +33,6 @@ export const Hero = () => {
       <div className="relative z-10 mx-auto flex min-h-[auto] max-w-7xl flex-col md:min-h-[700px] lg:min-h-[600px]">
         {/* Copy */}
         <div className="w-full px-6 pb-8 pt-4 md:w-[55%] md:py-12 md:pl-8 md:pr-0 lg:pl-12">
-          {/* Top bar */}
-          <header className="mb-8 flex items-center justify-between md:mb-10">
-            <img
-              src={logo}
-              alt="Multibat Baterias"
-              className="h-12 rounded-md bg-white/95 p-1.5 shadow-elevated sm:h-14"
-            />
-            <div className="hidden items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur-md ring-1 ring-white/20 md:flex">
-              <Clock className="h-4 w-4 text-secondary-glow" />
-              Atendimento 24h
-            </div>
-          </header>
 
           <div className="flex min-h-0 flex-1 flex-col justify-center md:min-h-[calc(700px-160px)] lg:min-h-[calc(600px-160px)]">
             {/* Badge */}
