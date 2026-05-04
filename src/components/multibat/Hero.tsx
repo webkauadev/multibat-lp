@@ -48,9 +48,9 @@ export const Hero = () => {
             >
               Bateria Nova com{" "}
               <br />
-              <span className="text-secondary-glow">
+              <span className="text-secondary-glow text-7xl text-left px-0 py-[10px] mx-0">
                 Entrega e Instalação Grátis
-              </span>{" "}
+              </span>
               <br />
               em até 50 Minutos.
             </h1>
