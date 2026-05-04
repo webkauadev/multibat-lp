@@ -48,10 +48,7 @@ export const SocialProof = () => (
               ))}
             </div>
             <p className="text-base italic text-primary">"{t.text}"</p>
-            <div className="mt-4 flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full gradient-cta font-display font-bold text-white">
-                {t.name.charAt(0)}
-              </div>
+            <div className="mt-4">
               <div className="font-display font-bold uppercase text-primary">{t.name}</div>
             </div>
           </div>
