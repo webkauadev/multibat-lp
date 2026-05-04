@@ -1,11 +1,22 @@
-import { Phone, Mail, MapPin, Instagram, Facebook, MessageCircle } from "lucide-react";
+import { Phone, MapPin, Instagram, Facebook, MessageCircle, Clock } from "lucide-react";
 import logo from "@/assets/multibat-logo.jpeg";
 import { WHATSAPP_URL } from "@/lib/multibat";
+
+const businessHours = [
+  { day: "Segunda-feira", hours: "07:00–18:00" },
+  { day: "Terça-feira", hours: "07:00–18:00" },
+  { day: "Quarta-feira", hours: "07:00–18:00" },
+  { day: "Quinta-feira", hours: "07:00–18:00" },
+  { day: "Sexta-feira", hours: "07:00–18:00" },
+  { day: "Sábado", hours: "07:00–11:30" },
+  { day: "Domingo", hours: "Fechado" },
+];
 
 export const Footer = () => (
   <footer className="bg-primary-dark text-white">
     <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-      <div className="grid gap-10 md:grid-cols-3">
+      <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+        {/* Brand */}
         <div>
           <img src={logo} alt="Multibat Baterias" className="h-16 rounded-md bg-white p-2" />
           <p className="mt-5 text-sm leading-relaxed text-white/75">
@@ -21,6 +32,7 @@ export const Footer = () => (
           </div>
         </div>
 
+        {/* Contato */}
         <div>
           <h3 className="font-display text-lg font-bold uppercase text-secondary-glow">Contato</h3>
           <ul className="mt-5 space-y-3 text-sm text-white/85">
@@ -29,20 +41,42 @@ export const Footer = () => (
                 <MessageCircle className="h-4 w-4" /> WhatsApp 24h
               </a>
             </li>
-            <li className="inline-flex items-center gap-2"><Phone className="h-4 w-4" /> (69) 9 9999-9999</li>
-            <li className="inline-flex items-center gap-2"><Mail className="h-4 w-4" /> contato@multibat.com.br</li>
+            <li>
+              <a href="tel:+5569999568540" className="inline-flex items-center gap-2 transition-smooth hover:text-secondary-glow">
+                <Phone className="h-4 w-4" /> (69) 99956-8540
+              </a>
+            </li>
           </ul>
         </div>
 
+        {/* Endereço */}
         <div>
-          <h3 className="font-display text-lg font-bold uppercase text-secondary-glow">Nossa Unidade</h3>
+          <h3 className="font-display text-lg font-bold uppercase text-secondary-glow">Endereço</h3>
           <p className="mt-5 inline-flex items-start gap-2 text-sm text-white/85">
             <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0" />
-            <span>Avenida Marechal Rondon, 5054<br />Bairro 5º BEC — Vilhena/RO</span>
+            <span>Av. Mal. Rondon, 5054 - 5 BEC<br />Centro, Vilhena - RO<br />76988-034</span>
           </p>
           <p className="mt-4 text-sm text-white/70">
             <strong className="text-white">Atendimento móvel:</strong> além da loja física, vamos até você em qualquer ponto da cidade.
           </p>
+        </div>
+
+        {/* Horário */}
+        <div>
+          <h3 className="font-display text-lg font-bold uppercase text-secondary-glow">Horário de Funcionamento</h3>
+          <ul className="mt-5 space-y-1.5 text-sm text-white/85">
+            {businessHours.map((item) => (
+              <li key={item.day} className="flex items-center justify-between gap-2">
+                <span className="text-white/70">{item.day}</span>
+                <span className={item.hours === "Fechado" ? "font-semibold text-secondary" : ""}>
+                  {item.hours}
+                </span>
+              </li>
+            ))}
+          </ul>
+          <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-secondary/30 bg-secondary/10 px-3 py-1.5 text-xs font-semibold text-secondary-glow">
+            <Clock className="h-3.5 w-3.5" /> Emergências: Atendimento 24h
+          </div>
         </div>
       </div>
 
