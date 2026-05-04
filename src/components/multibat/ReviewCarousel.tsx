@@ -130,23 +130,15 @@ export const ReviewCarousel = () => {
                 >
                   <div className="min-h-[280px] rounded-lg border border-secondary/50 bg-primary-dark/80 p-4 shadow-elevated transition-smooth hover:shadow-[0_20px_50px_-12px_hsl(22_95%_54%/0.25)] sm:p-6">
                     {/* Top row */}
-                    <div className="flex items-start gap-3">
-                      <img
-                        src={r.photo}
-                        alt={`Foto de ${r.name}`}
-                        loading="lazy"
-                        className="h-12 w-12 shrink-0 rounded-full object-cover"
-                      />
-                      <div className="min-w-0">
-                        <p className="font-display text-base font-bold text-white">{r.name}</p>
-                        <div className="mt-1 flex items-center gap-2">
-                          <div className="flex gap-0.5">
-                            {Array.from({ length: 5 }).map((_, i) => (
-                              <Star key={i} className="h-[18px] w-[18px] fill-[#ffc107] text-[#ffc107]" />
-                            ))}
-                          </div>
-                          <span className="text-xs text-white/50">{r.time}</span>
+                    <div>
+                      <p className="font-display text-base font-bold text-white">{r.name}</p>
+                      <div className="mt-1 flex items-center gap-2">
+                        <div className="flex gap-0.5">
+                          {Array.from({ length: 5 }).map((_, i) => (
+                            <Star key={i} className="h-[18px] w-[18px] fill-[#ffc107] text-[#ffc107]" />
+                          ))}
                         </div>
+                        <span className="text-xs text-white/50">{r.time}</span>
                       </div>
                     </div>
                     {/* Review body */}
