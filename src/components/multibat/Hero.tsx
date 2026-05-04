@@ -6,7 +6,7 @@ import mascoteHero from "@/assets/mascote-hero.png";
 export const Hero = () => {
   return (
     <section
-      className="relative overflow-hidden min-h-[auto] md:min-h-[700px] lg:min-h-[600px]"
+      className="relative overflow-hidden min-h-[auto] md:min-h-[700px] lg:min-h-[750px]"
       style={{ backgroundColor: "#1a2a4a" }}
     >
       {/* Desktop/Tablet: image as absolute right half */}
