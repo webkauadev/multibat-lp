@@ -7,6 +7,7 @@ import { Differentials } from "@/components/multibat/Differentials";
 import { ReviewCarousel } from "@/components/multibat/ReviewCarousel";
 import { HowItWorks } from "@/components/multibat/HowItWorks";
 import { FAQ } from "@/components/multibat/FAQ";
+import { Locations } from "@/components/multibat/Locations";
 import { FinalCTA } from "@/components/multibat/FinalCTA";
 import { Footer } from "@/components/multibat/Footer";
 import { StickyWhatsApp } from "@/components/multibat/StickyWhatsApp";
