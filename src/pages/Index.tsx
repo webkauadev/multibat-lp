@@ -63,6 +63,7 @@ const Index = () => {
       <ReviewCarousel />
       <HowItWorks />
       <FAQ />
+      <Locations />
       <FinalCTA />
       <Footer />
       <StickyWhatsApp />
