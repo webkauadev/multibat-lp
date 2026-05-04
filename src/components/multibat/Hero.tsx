@@ -6,7 +6,7 @@ import mascoteHero from "@/assets/mascote-hero.png";
 export const Hero = () => {
   return (
     <section
-      className="relative overflow-hidden min-h-[auto] md:min-h-[700px] lg:min-h-[600px]"
+      className="relative overflow-hidden min-h-[auto] md:min-h-[700px] lg:min-h-[750px]"
       style={{ backgroundColor: "#1a2a4a" }}
     >
       {/* Desktop/Tablet: image as absolute right half */}
@@ -30,11 +30,11 @@ export const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 mx-auto flex min-h-[auto] max-w-7xl flex-col md:min-h-[700px] lg:min-h-[600px]">
+      <div className="relative z-10 mx-auto flex min-h-[auto] max-w-7xl flex-col md:min-h-[700px] lg:min-h-[750px]">
         {/* Copy */}
         <div className="w-full px-6 pb-8 pt-4 md:w-[55%] md:py-12 md:pl-8 md:pr-0 lg:pl-12">
 
-          <div className="flex min-h-0 flex-1 flex-col justify-center md:min-h-[calc(700px-160px)] lg:min-h-[calc(600px-160px)]">
+          <div className="flex min-h-0 flex-1 flex-col justify-center md:min-h-[calc(700px-160px)] lg:min-h-[calc(750px-160px)]">
             {/* Badge */}
             <div className="mb-6 inline-flex animate-fade-up items-center gap-2 self-start rounded-full bg-secondary px-4 py-2 text-sm font-bold uppercase tracking-wider text-white shadow-cta">
               <Zap className="h-4 w-4" fill="currentColor" />
