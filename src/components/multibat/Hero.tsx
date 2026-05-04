@@ -55,13 +55,15 @@ export const Hero = () => {
 
             {/* Headline */}
             <h1
-              className="animate-fade-up font-display text-[28px] font-bold leading-[1.2] text-white sm:text-4xl lg:text-[48px]"
+              className="animate-fade-up font-bold leading-[1.2] text-white sm:text-4xl lg:text-[48px] font-sans text-5xl"
               style={{ animationDelay: "0.1s" }}
             >
               Bateria Nova com{" "}
+              <br />
               <span className="text-secondary-glow">
                 Entrega e Instalação Grátis
               </span>{" "}
+              <br />
               em até 50 Minutos.
             </h1>
 
