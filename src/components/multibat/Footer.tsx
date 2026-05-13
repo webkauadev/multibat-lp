@@ -1,4 +1,4 @@
-import { Phone, MapPin, Instagram, Facebook, MessageCircle, Clock } from "lucide-react";
+import { Phone, MapPin, Instagram, Facebook, MessageCircle } from "lucide-react";
 import logo from "@/assets/multibat-logo.jpeg";
 import { WHATSAPP_URL } from "@/lib/multibat";
 
