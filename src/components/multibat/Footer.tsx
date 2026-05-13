@@ -6,7 +6,7 @@ import { WHATSAPP_URL } from "@/lib/multibat";
 export const Footer = () => (
   <footer className="bg-primary-dark text-white">
     <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-      <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
         {/* Brand */}
         <div>
           <img src={logo} alt="Multibat Baterias" className="h-16 rounded-md bg-white p-2" />
@@ -52,23 +52,6 @@ export const Footer = () => (
           </p>
         </div>
 
-        {/* Horário */}
-        <div>
-          <h3 className="font-display text-lg font-bold uppercase text-secondary-glow">Horário de Funcionamento</h3>
-          <ul className="mt-5 space-y-1.5 text-sm text-white/85">
-            {businessHours.map((item) => (
-              <li key={item.day} className="flex items-center justify-between gap-2">
-                <span className="text-white/70">{item.day}</span>
-                <span className={item.hours === "Fechado" ? "font-semibold text-secondary" : ""}>
-                  {item.hours}
-                </span>
-              </li>
-            ))}
-          </ul>
-          <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-secondary/30 bg-secondary/10 px-3 py-1.5 text-xs font-semibold text-secondary-glow">
-            <Clock className="h-3.5 w-3.5" /> Emergências: Atendimento 24h
-          </div>
-        </div>
       </div>
 
       <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-sm text-white/60 md:flex-row">
