@@ -2,15 +2,6 @@ import { Phone, MapPin, Instagram, Facebook, MessageCircle } from "lucide-react"
 import logo from "@/assets/multibat-logo.jpeg";
 import { WHATSAPP_URL } from "@/lib/multibat";
 
-const businessHours = [
-  { day: "Segunda-feira", hours: "07:00–18:00" },
-  { day: "Terça-feira", hours: "07:00–18:00" },
-  { day: "Quarta-feira", hours: "07:00–18:00" },
-  { day: "Quinta-feira", hours: "07:00–18:00" },
-  { day: "Sexta-feira", hours: "07:00–18:00" },
-  { day: "Sábado", hours: "07:00–11:30" },
-  { day: "Domingo", hours: "Fechado" },
-];
 
 export const Footer = () => (
   <footer className="bg-primary-dark text-white">
