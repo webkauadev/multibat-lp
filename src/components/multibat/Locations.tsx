@@ -86,6 +86,18 @@ const locations: Location[] = [
     x: 210,
     y: 230,
   },
+  {
+    id: 7,
+    city: "Ariquemes",
+    state: "RO",
+    label: "Nova",
+    address: "Alameda Mogno, 1923 - Setor 03",
+    hours: "Consulte",
+    isMain: false,
+    mapsUrl: "https://maps.google.com/?q=Alameda+Mogno,+1923+-+Setor+03,+Ariquemes+-+RO,+78931-130",
+    x: 185,
+    y: 205,
+  },
 ];
 
 const InteractiveMap = ({
@@ -285,7 +297,7 @@ export const Locations = () => {
             Estamos Perto de Você
           </h2>
           <p className="mt-3 text-base sm:text-lg text-muted-foreground max-w-xl mx-auto">
-            Multibat com cobertura em 6 cidades do Centro-Oeste
+            Multibat com cobertura em 7 unidades no Centro-Oeste
           </p>
         </div>
 
