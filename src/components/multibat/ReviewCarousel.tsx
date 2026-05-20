@@ -1,15 +1,15 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 export const ReviewCarousel = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
+    if (!containerRef.current) return;
     const script = document.createElement("script");
     script.src = "https://cdn.trustindex.io/loader.js?854e5ad72462432d1d167ea4a13";
     script.async = true;
     script.defer = true;
-    document.body.appendChild(script);
-    return () => {
-      document.body.removeChild(script);
-    };
+    containerRef.current.appendChild(script);
   }, []);
 
   return (
@@ -23,7 +23,7 @@ export const ReviewCarousel = () => {
             Avaliações reais dos nossos clientes
           </p>
         </div>
-        <div className="mt-12" />
+        <div ref={containerRef} className="mt-12" />
       </div>
     </section>
   );
