@@ -14,6 +14,12 @@ import { StickyWhatsApp } from "@/components/multibat/StickyWhatsApp";
 
 const Index = () => {
   useEffect(() => {
+    // GTM page_view (SPA)
+    // @ts-expect-error dataLayer injected by GTM
+    window.dataLayer = window.dataLayer || [];
+    // @ts-expect-error
+    window.dataLayer.push({ event: "page_view", page_path: window.location.pathname });
+
     document.title = "Multibat | Bateria com Entrega e Instalação em até 50 Minutos";
 
     const setMeta = (name: string, content: string) => {
