@@ -1,8 +1,4 @@
-export const WHATSAPP_NUMBER = "5569999999999"; // placeholder
-export const WHATSAPP_MESSAGE = encodeURIComponent(
-  "Olá Multibat! Quero solicitar um orçamento de bateria para meu carro."
-);
-export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`;
+export const WHATSAPP_URL = "https://wa.me/5569993874206?text=Ol%C3%A1%21+%F0%9F%91%8B%0AVim+atrav%C3%A9s+da+landing+page+da+Multibat+e+gostaria+de+solicitar+um+atendimento+sobre+baterias+automotivas+%F0%9F%9A%97%F0%9F%94%8B&utm_source=chatgpt.com";
 
 export const trackCta = (label: string) => {
   // GA4 / Meta Pixel hooks
