@@ -4,12 +4,14 @@ export const ReviewCarousel = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!containerRef.current) return;
+    const container = containerRef.current;
+    if (!container || container.querySelector("script[data-trustindex]")) return;
     const script = document.createElement("script");
     script.src = "https://cdn.trustindex.io/loader.js?854e5ad72462432d1d167ea4a13";
     script.async = true;
     script.defer = true;
-    containerRef.current.appendChild(script);
+    script.setAttribute("data-trustindex", "true");
+    container.appendChild(script);
   }, []);
 
   return (
