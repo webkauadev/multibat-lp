@@ -1,0 +1,9 @@
+# Multibat
+
+> Venda, entrega e instalação de baterias automotivas em Vilhena/RO em até 50 minutos, com atendimento 24h via WhatsApp.
+
+A Multibat é especialista em baterias automotivas das marcas Moura, Heliar e Pioneiro. Oferecemos entrega e instalação grátis, garantia de fábrica e descarte ecológico da bateria usada.
+
+## Pages
+
+- [Home](/): Apresentação dos serviços, marcas atendidas, diferenciais, depoimentos, FAQ e contato.
