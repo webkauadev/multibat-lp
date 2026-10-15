@@ -251,7 +251,11 @@ const InteractiveMap = ({
   );
 };
 
-export const Locations = () => {
+interface LocationsProps {
+  subtitle?: string;
+}
+
+export const Locations = ({ subtitle = "Multibat com cobertura em 7 unidades no Centro-Oeste" }: LocationsProps) => {
   const [activeId, setActiveId] = useState<number | null>(null);
   const [hoverId, setHoverId] = useState<number | null>(null);
   const [visible, setVisible] = useState(false);
@@ -297,7 +301,7 @@ export const Locations = () => {
             Estamos Perto de Você
           </h2>
           <p className="mt-3 text-base sm:text-lg text-muted-foreground max-w-xl mx-auto">
-            Multibat com cobertura em 7 unidades no Centro-Oeste
+            {subtitle}
           </p>
         </div>
 
