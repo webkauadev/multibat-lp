@@ -1,9 +1,39 @@
 import { CTAButton } from "./CTAButton";
 import { Zap, ShieldCheck, Clock, Check } from "lucide-react";
+import type { ReactNode } from "react";
 
 import mascoteHero from "@/assets/mascote-hero.png";
 
-export const Hero = () => {
+interface HeroProps {
+  badgeText?: string;
+  titleLine1?: string;
+  titleHighlight?: string;
+  titleLine2?: string;
+  subheadline?: ReactNode;
+  supportText?: string;
+  ctaLabel?: string;
+}
+
+const defaultSubheadline = (
+  <>
+    As melhores marcas do mercado —{" "}
+    <strong className="text-white">
+      Moura, Heliar, Pioneiro e Maxfor
+    </strong>{" "}
+    — com o menor preço da região e garantia de fábrica. Levamos a
+    bateria até você agora!
+  </>
+);
+
+export const Hero = ({
+  badgeText = "Bateria acabou? Não fique parado!",
+  titleLine1 = "Bateria Nova com",
+  titleHighlight = "Entrega e Instalação Grátis",
+  titleLine2 = "em até 50 Minutos.",
+  subheadline,
+  supportText = "Atendimento imediato via WhatsApp",
+  ctaLabel = "PEDIR MINHA BATERIA AGORA",
+}: HeroProps) => {
   return (
     <section
       className="relative overflow-hidden min-h-[auto] md:min-h-[700px] lg:min-h-[750px]"
@@ -38,7 +68,7 @@ export const Hero = () => {
             {/* Badge */}
             <div className="mb-6 inline-flex animate-fade-up items-center gap-2 self-start rounded-full bg-secondary px-4 py-2 text-sm font-bold uppercase tracking-wider text-white shadow-cta">
               <Zap className="h-4 w-4" fill="currentColor" />
-              Bateria acabou? Não fique parado!
+              {badgeText}
             </div>
 
             {/* Headline */}
@@ -46,13 +76,17 @@ export const Hero = () => {
               className="animate-fade-up font-bold leading-[1.2] text-white sm:text-4xl lg:text-[48px] font-sans text-5xl"
               style={{ animationDelay: "0.1s" }}
             >
-              Bateria Nova com{" "}
+              {titleLine1}{" "}
               <br />
               <span className="text-secondary-glow text-7xl text-left px-0 py-[10px] mx-0">
-                Entrega e Instalação Grátis
+                {titleHighlight}
               </span>
-              <br />
-              em até 50 Minutos.
+              {titleLine2 && (
+                <>
+                  <br />
+                  {titleLine2}
+                </>
+              )}
             </h1>
 
             {/* Subheadline */}
@@ -60,12 +94,7 @@ export const Hero = () => {
               className="mt-4 max-w-xl animate-fade-up text-sm leading-[1.6] text-white/90 sm:text-base"
               style={{ animationDelay: "0.2s" }}
             >
-              As melhores marcas do mercado —{" "}
-              <strong className="text-white">
-                Moura, Heliar, Pioneiro e Maxfor
-              </strong>{" "}
-              — com o menor preço da região e garantia de fábrica. Levamos a
-              bateria até você agora!
+              {subheadline ?? defaultSubheadline}
             </p>
 
             {/* CTA */}
@@ -76,7 +105,7 @@ export const Hero = () => {
               <CTAButton
                 size="xl"
                 trackingLabel="hero-main"
-                label="PEDIR MINHA BATERIA AGORA"
+                label={ctaLabel}
               />
             </div>
 
@@ -85,7 +114,7 @@ export const Hero = () => {
               style={{ animationDelay: "0.5s" }}
             >
               <span className="inline-flex h-2 w-2 animate-pulse rounded-full bg-accent-glow align-middle" />{" "}
-              Atendimento imediato via WhatsApp
+              {supportText}
             </p>
 
             {/* Badges */}

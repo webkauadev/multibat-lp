@@ -1,5 +1,6 @@
 import { CTAButton } from "./CTAButton";
 import { ShieldCheck } from "lucide-react";
+import type { ReactNode } from "react";
 import brandMoura from "@/assets/brand-moura.png";
 import brandHeliar from "@/assets/brand-heliar.jpg";
 import brandPioneiro from "@/assets/brand-pioneiro.png";
@@ -12,16 +13,39 @@ const brands = [
   { name: "Maxfor", desc: "Excelente custo-benefício para solução inteligente", logo: brandMaxfor },
 ];
 
-export const Brands = () => (
+const defaultDescription =
+  "A Multibat oferece soluções para todos os perfis de motorista. Todas originais, com procedência e instalação no local.";
+
+const defaultPreCta = (
+  <>
+    <strong>Temos opções premium e econômicas.</strong> Fale no WhatsApp e descubra a melhor bateria para o seu carro e orçamento.
+  </>
+);
+
+interface BrandsProps {
+  eyebrow?: string;
+  description?: string;
+  preCtaText?: ReactNode;
+  highlightText?: string;
+  ctaLabel?: string;
+}
+
+export const Brands = ({
+  eyebrow = "Marcas Originais",
+  description = defaultDescription,
+  preCtaText,
+  highlightText,
+  ctaLabel = "FALAR COM ESPECIALISTA",
+}: BrandsProps) => (
   <section className="bg-muted py-20 sm:py-24">
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-3xl text-center">
-        <span className="inline-block rounded-full bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-primary">Marcas Originais</span>
+        <span className="inline-block rounded-full bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-primary">{eyebrow}</span>
         <h2 className="mt-4 font-display text-3xl font-black uppercase text-primary sm:text-4xl md:text-5xl">
           Baterias para <span className="text-secondary">todos os perfis</span>
         </h2>
         <p className="mx-auto mt-5 max-w-2xl text-lg text-muted-foreground">
-          A Multibat oferece soluções para todos os perfis de motorista. Todas originais, com procedência e instalação no local.
+          {description}
         </p>
       </div>
 
@@ -45,9 +69,14 @@ export const Brands = () => (
 
       <div className="mt-12 text-center">
         <p className="mx-auto mb-5 max-w-2xl text-base text-primary sm:text-lg">
-          <strong>Temos opções premium e econômicas.</strong> Fale no WhatsApp e descubra a melhor bateria para o seu carro e orçamento.
+          {preCtaText ?? defaultPreCta}
         </p>
-        <CTAButton variant="whatsapp" trackingLabel="brands-cta" label="FALAR COM ESPECIALISTA" />
+        {highlightText && (
+          <p className="mx-auto mb-5 max-w-2xl text-base sm:text-lg">
+            <strong className="text-secondary">{highlightText}</strong>
+          </p>
+        )}
+        <CTAButton variant="whatsapp" trackingLabel="brands-cta" label={ctaLabel} />
       </div>
     </div>
   </section>

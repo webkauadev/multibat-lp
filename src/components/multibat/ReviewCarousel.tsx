@@ -1,6 +1,10 @@
 import { useEffect, useRef } from "react";
 
-export const ReviewCarousel = () => {
+interface ReviewCarouselProps {
+  subtitle?: string;
+}
+
+export const ReviewCarousel = ({ subtitle = "Avaliações reais dos nossos clientes" }: ReviewCarouselProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -22,7 +26,7 @@ export const ReviewCarousel = () => {
             Quem já precisou, <span className="text-secondary-glow">recomenda.</span>
           </h2>
           <p className="mt-3 text-base text-white/70 sm:text-lg">
-            Avaliações reais dos nossos clientes
+            {subtitle}
           </p>
         </div>
         <div ref={containerRef} className="mt-12" />

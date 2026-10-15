@@ -1,19 +1,32 @@
 import { XCircle } from "lucide-react";
 
-const items = [
+const defaultItems = [
   "Chega de pedir \"chupeta\" para desconhecidos.",
   "Não corra o risco de danificar a parte elétrica do seu carro.",
   "Evite esperar horas por um guincho.",
 ];
 
-export const Problem = () => (
+const defaultDescription =
+  "Ligou o carro e... o motor não vira.\nA frustração é enorme, mas a solução não precisa ser demorada.";
+
+interface ProblemProps {
+  description?: string;
+  items?: string[];
+  supportText?: string;
+}
+
+export const Problem = ({
+  description = defaultDescription,
+  items = defaultItems,
+  supportText,
+}: ProblemProps) => (
   <section className="bg-muted py-20 sm:py-24">
     <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
       <h2 className="text-center font-display text-3xl font-black uppercase text-primary sm:text-4xl md:text-5xl">
         Não deixe um imprevisto <span className="text-secondary">estragar o seu dia.</span>
       </h2>
       <p className="mx-auto mt-6 max-w-2xl text-center text-lg text-muted-foreground whitespace-pre-line">
-        Ligou o carro e... o motor não vira.{"\n"}A frustração é enorme, mas a solução não precisa ser demorada.
+        {description}
       </p>
 
       <ul className="mx-auto mt-10 grid max-w-3xl gap-4">
@@ -27,6 +40,12 @@ export const Problem = () => (
           </li>
         ))}
       </ul>
+
+      {supportText && (
+        <p className="mx-auto mt-8 max-w-2xl text-center text-lg text-muted-foreground">
+          <strong className="text-primary">{supportText}</strong>
+        </p>
+      )}
     </div>
   </section>
 );
