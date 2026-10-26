@@ -12,6 +12,7 @@ interface HeroProps {
   subheadline?: ReactNode;
   supportText?: string;
   ctaLabel?: string;
+  promoNote?: ReactNode;
 }
 
 const defaultSubheadline = (
@@ -33,6 +34,7 @@ export const Hero = ({
   subheadline,
   supportText = "Atendimento imediato via WhatsApp",
   ctaLabel = "PEDIR MINHA BATERIA AGORA",
+  promoNote,
 }: HeroProps) => {
   return (
     <section
@@ -139,6 +141,15 @@ export const Hero = ({
                 </div>
               ))}
             </div>
+
+            {promoNote && (
+              <div
+                className="mt-5 max-w-xl animate-fade-up border-l-2 border-secondary pl-3 text-xs text-white/75"
+                style={{ animationDelay: "0.7s" }}
+              >
+                {promoNote}
+              </div>
+            )}
           </div>
         </div>
 
